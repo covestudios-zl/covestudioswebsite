@@ -505,6 +505,20 @@
       letter-spacing: 0.08em; text-transform: uppercase;
       color: rgba(240,237,232,0.8);
     }
+    .port-soon-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.7));
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 10px; opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .port-card:hover .port-soon-overlay { opacity: 1; }
+    .port-soon-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(240,237,232,0.7);
+    }
 
     /* ── Video popup modal ── */
     #port-modal {
@@ -1968,7 +1982,7 @@ z"/>
       <div id="work-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;">
 
         <!-- Card 1 — Common Ground Cleaning -->
-        <div class="port-card port-card-clickable reveal" style="transition-delay:0s;" data-video="brand_assets/Common Ground Walkthrough.mp4" data-title="Common Ground Cleaning" tabindex="0" role="button" aria-label="Watch Common Ground Cleaning website walkthrough">
+        <div class="port-card port-card-clickable reveal" style="transition-delay:0s;" data-video="https://www.youtube.com/embed/8rUHckaVKa8?autoplay=1" data-title="Common Ground Cleaning" tabindex="0" role="button" aria-label="Watch Common Ground Cleaning website walkthrough">
           <div class="port-bar">
             <div class="port-dots"><div class="port-dot"></div><div class="port-dot"></div><div class="port-dot"></div></div>
             <div class="port-url">commongroundcleaning.com</div>
@@ -1989,7 +2003,7 @@ z"/>
         </div>
 
         <!-- Card 2 — Cedar & Stone Landscaping -->
-        <div class="port-card port-card-clickable reveal" style="transition-delay:0.1s;" data-video="brand_assets/Cedar & Stone Walkthrough.mp4" data-title="Cedar &amp; Stone Landscaping" tabindex="0" role="button" aria-label="Watch Cedar and Stone Landscaping website walkthrough">
+        <div class="port-card port-card-clickable reveal" style="transition-delay:0.1s;" data-video="https://www.youtube.com/embed/xcrBIzXwjPc?autoplay=1" data-title="Cedar &amp; Stone Landscaping" tabindex="0" role="button" aria-label="Watch Cedar and Stone Landscaping website walkthrough">
           <div class="port-bar">
             <div class="port-dots"><div class="port-dot"></div><div class="port-dot"></div><div class="port-dot"></div></div>
             <div class="port-url">cedarandstone.co</div>
@@ -2015,7 +2029,13 @@ z"/>
             <div class="port-dots"><div class="port-dot"></div><div class="port-dot"></div><div class="port-dot"></div></div>
             <div class="port-url">northlinebakehouse.com</div>
           </div>
-          <img src="brand_assets/Thumbnail - Northline.png" alt="Northline Coffee and Bakehouse website" style="width:100%;height:196px;object-fit:cover;object-position:top;display:block;" loading="lazy"/>
+          <div style="position:relative;">
+            <img src="brand_assets/Thumbnail - Northline.png" alt="Northline Coffee and Bakehouse website" style="width:100%;height:196px;object-fit:cover;object-position:top;display:block;" loading="lazy"/>
+            <div class="port-soon-overlay">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(240,237,232,0.55)" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span class="port-soon-label">Walkthrough Coming Soon</span>
+            </div>
+          </div>
           <div style="padding:20px 22px 22px;">
             <div style="margin-bottom:8px;">
               <h3 class="syne" style="font-weight:600;font-size:0.93rem;letter-spacing:-0.01em;color:#f0ede8;">Northline Coffee &amp; Bakehouse</h3>
