@@ -22,7 +22,7 @@ const MIME = {
 };
 
 http.createServer((req, res) => {
-  const url = req.url.split("?")[0];
+  const url = decodeURIComponent(req.url.split("?")[0]);
   const filePath = path.join(ROOT, url === "/" ? "index.html" : url);
 
   fs.readFile(filePath, (err, data) => {
